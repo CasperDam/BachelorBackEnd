@@ -16,5 +16,7 @@ namespace BachelorBackEnd
         void GetParticipant();
 
         void GetAllPArticipants();
+
+        void VerifyParticipant();
     }
 }

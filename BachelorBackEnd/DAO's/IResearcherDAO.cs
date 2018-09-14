@@ -15,5 +15,7 @@ namespace BachelorBackEnd
         void GetResearcher();
 
         void GetAllResearchers();
+
+        void VerifyResearcher();
     }
 }

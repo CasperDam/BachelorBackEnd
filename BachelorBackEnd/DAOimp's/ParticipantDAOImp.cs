@@ -28,5 +28,10 @@ namespace BachelorBackEnd
         {
             throw new NotImplementedException();
         }
+
+        public void VerifyParticipant()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
