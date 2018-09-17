@@ -13,10 +13,10 @@ namespace BachelorBackEnd
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class mydbEntities1 : DbContext
+    public partial class mydbEntities2 : DbContext
     {
-        public mydbEntities1()
-            : base("name=mydbEntities1")
+        public mydbEntities2()
+            : base("name=mydbEntities2")
         {
         }
     

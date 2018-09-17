@@ -14,7 +14,7 @@
           <Property Name="lastname" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="password" Type="varchar" MaxLength="45" Nullable="false" />
-          <Property Name="pause" Type="binary" MaxLength="1" Nullable="false" />
+          <Property Name="pause" Type="tinyint" Nullable="false" />
         </EntityType>
         <EntityType Name="test_table">
           <Key>
@@ -44,7 +44,7 @@
           <Property Name="lastname" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="password" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="pause" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="pause" Type="SByte" Nullable="false" />
         </EntityType>
         <EntityType Name="test_table">
           <Key>
@@ -56,7 +56,7 @@
           <Property Name="smoker" Type="SByte" Nullable="false" />
           <Property Name="timestamp" Type="DateTime" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="mydbEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="mydbEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="participants" EntityType="Self.participants" />
           <EntitySet Name="test_table" EntityType="Self.test_table" />
         </EntityContainer>
@@ -65,7 +65,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="mydbModel1StoreContainer" CdmEntityContainer="mydbEntities1">
+        <EntityContainerMapping StorageEntityContainer="mydbModel1StoreContainer" CdmEntityContainer="mydbEntities2">
           <EntitySetMapping Name="participants">
             <EntityTypeMapping TypeName="mydbModel1.participants">
               <MappingFragment StoreEntitySet="participants">

@@ -96,28 +96,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="ParticipantModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ParticipantModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ParticipantModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ParticipantModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ParticipantModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ParticipantModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="participants.cs">
-      <DependentUpon>ParticipantModel.tt</DependentUpon>
+      <DependentUpon>TestModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TestModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TestModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="test_table.cs">
-      <DependentUpon>ParticipantModel.tt</DependentUpon>
+      <DependentUpon>TestModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -132,12 +132,12 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <EntityDeploy Include="ParticipantModel.edmx">
+    <EntityDeploy Include="TestModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ParticipantModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>TestModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ParticipantModel.edmx.diagram">
-      <DependentUpon>ParticipantModel.edmx</DependentUpon>
+    <None Include="TestModel.edmx.diagram">
+      <DependentUpon>TestModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -151,15 +151,15 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="ParticipantModel.Context.tt">
+    <Content Include="TestModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ParticipantModel.edmx</DependentUpon>
-      <LastGenOutput>ParticipantModel.Context.cs</LastGenOutput>
+      <DependentUpon>TestModel.edmx</DependentUpon>
+      <LastGenOutput>TestModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ParticipantModel.tt">
+    <Content Include="TestModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ParticipantModel.edmx</DependentUpon>
-      <LastGenOutput>ParticipantModel.cs</LastGenOutput>
+      <DependentUpon>TestModel.edmx</DependentUpon>
+      <LastGenOutput>TestModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
