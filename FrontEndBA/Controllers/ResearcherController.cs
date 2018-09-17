@@ -12,6 +12,7 @@ namespace FrontEndBA.Controllers
 {
     public class ResearcherController : Controller
     {
+        public IDALAccess.IDALResearcher DataAcess;
         // GET: ResearcherLogin
         public ActionResult Index()
         {
@@ -40,13 +41,12 @@ namespace FrontEndBA.Controllers
         public ActionResult RegisterResearcher([Bind("Email,Firstname,Lastname,Password")] ResearcherRegisterViewModel researcherRegisterobj)
         {
 
-            BachelorBackEnd.participants currentParticipants = RegisterConverter.ParticipantobjFromViewToDto(researcherRegisterobj);
-            
-
+            //BachelorBackEnd.participants currentParticipants = RegisterConverter.ParticipantobjFromViewToDto(researcherRegisterobj);
+           
 
             try
             {
-                // TODO: Add insert logic here
+            
 
                 return RedirectToAction(nameof(Index));
             }

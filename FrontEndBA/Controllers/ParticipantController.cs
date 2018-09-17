@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FrontEndBA.DALAccess;
 using FrontEndBA.Models.ParticipantModel.AccountViewModels;
+using FrontEndBA.Utility;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +12,7 @@ namespace FrontEndBA.Controllers
 {
     public class ParticipantController : Controller
     {
+        public IDALAccess.IDALParticipant DataAcess;
         // GET: ParticipantLogin
         public ActionResult Index()
         {
@@ -45,13 +48,15 @@ namespace FrontEndBA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult ParticipentRegister([Bind("Email,Firstname,Lastname,Password")] ParticipantRegisterViewModel participantRegisterobj)
         {
-           
-                var test = participantRegisterobj;
-            
-            
+
+            BachelorBackEnd.participants currentParticipants = RegisterConverter.ParticipantobjFromViewToDto(participantRegisterobj);
+            DataAcess = new DalParticipant();
+            DataAcess.SaveRegisterDto(currentParticipants);
+
+
             try
             {
-                // TODO: Add insert logic here
+                
 
                 return RedirectToAction(nameof(Index));
             }

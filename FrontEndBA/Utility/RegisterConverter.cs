@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BachelorBackEnd;
+using FrontEndBA.Models.ParticipantModel.AccountViewModels;
 using FrontEndBA.Models.ResearcherModel.AccountViewModels;
 
 namespace FrontEndBA.Utility
 {
     public class RegisterConverter
     {
-        public static BachelorBackEnd.participants ParticipantobjFromViewToDto(ResearcherRegisterViewModel registerobj)
+        public static BachelorBackEnd.participants ParticipantobjFromViewToDto(ParticipantRegisterViewModel registerobj)
         {
             BachelorBackEnd.participants currentParticipants = new participants();
             if (registerobj != null)
