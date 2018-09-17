@@ -18,7 +18,7 @@ namespace FrontEndBA.Utility
                 currentParticipants.email = registerobj.Email;
                 currentParticipants.lastname = registerobj.Lastname;
                 currentParticipants.password = registerobj.Password;
-                currentParticipants.pause = false;
+                currentParticipants.pause = 0;
 
             }
 

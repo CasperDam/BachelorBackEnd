@@ -17,4 +17,8 @@
     <ProjectReference Include="..\BachelorBackEnd\BachelorBackEnd.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DALAccess\" />
+  </ItemGroup>
+
 </Project>
