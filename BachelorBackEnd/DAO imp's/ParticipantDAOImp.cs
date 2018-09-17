@@ -15,7 +15,6 @@ namespace BachelorBackEnd
             {
                 ent.participants.Add(participant);
                 ent.SaveChanges();
-                
             }
         }
 
