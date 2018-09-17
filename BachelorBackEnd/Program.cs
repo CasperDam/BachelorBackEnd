@@ -10,6 +10,12 @@ namespace BachelorBackEnd
     {
         static void Main(string[] args)
         {
+            ResearcherDAOImp test = new ResearcherDAOImp();
+            string k = Console.ReadLine();
+            if (k == "k")
+            {
+                test.AddResearcher();
+            }
         }
     }
 }
