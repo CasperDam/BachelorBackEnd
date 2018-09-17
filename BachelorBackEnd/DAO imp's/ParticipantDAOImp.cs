@@ -11,7 +11,14 @@ namespace BachelorBackEnd
     {
         public void AddParticipant()
         {
-            throw new NotImplementedException();
+
+            using (mydbEntities ent = new mydbEntities())
+            {
+                
+                
+                ent.SaveChanges();
+                
+            }
         }
 
         public void DeleteParticipant()

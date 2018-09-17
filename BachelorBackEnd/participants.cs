@@ -19,6 +19,6 @@ namespace BachelorBackEnd
         public string lastname { get; set; }
         public string email { get; set; }
         public string password { get; set; }
-        public byte[] pause { get; set; }
+        public sbyte pause { get; set; }
     }
 }
