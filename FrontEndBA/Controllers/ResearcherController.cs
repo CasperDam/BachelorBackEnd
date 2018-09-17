@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BachelorBackEnd;
 using FrontEndBA.Models.ResearcherModel.AccountViewModels;
+using FrontEndBA.Utility;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +12,7 @@ namespace FrontEndBA.Controllers
 {
     public class ResearcherController : Controller
     {
+        public IDALAccess.IDALResearcher DataAcess;
         // GET: ResearcherLogin
         public ActionResult Index()
         {
@@ -38,12 +41,12 @@ namespace FrontEndBA.Controllers
         public ActionResult RegisterResearcher([Bind("Email,Firstname,Lastname,Password")] ResearcherRegisterViewModel researcherRegisterobj)
         {
 
-            var test = researcherRegisterobj;
-
+            //BachelorBackEnd.participants currentParticipants = RegisterConverter.ParticipantobjFromViewToDto(researcherRegisterobj);
+           
 
             try
             {
-                // TODO: Add insert logic here
+            
 
                 return RedirectToAction(nameof(Index));
             }
