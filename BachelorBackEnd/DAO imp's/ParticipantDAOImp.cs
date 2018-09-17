@@ -9,13 +9,11 @@ namespace BachelorBackEnd
 {
     public class ParticipantDAOImp : IParticipantDAO
     {
-        public void AddParticipant()
+        public void AddParticipant(participants participant)
         {
-
-            using (mydbEntities ent = new mydbEntities())
+            using (mydbEntities2 ent = new mydbEntities2())
             {
-                
-                
+                ent.participants.Add(participant);
                 ent.SaveChanges();
                 
             }
